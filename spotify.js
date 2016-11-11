@@ -13,9 +13,14 @@ $(document).ready(function(){
             trackDiv.addClass("trackHolder");
             
             var trackImage = $("<img>");
-            trackImage.attr("src", response.tracks.items[0].album.images[1].url);
+            trackImage.attr("src", response.tracks.items[0].album.images[0].url);
             trackImage.attr("class", "jpg");
             trackDiv.append(trackImage);
+
+            var trackAudio = $("<audio>");
+            trackAudio.attr("controls", true);
+            trackAudio.attr("src", response.tracks.items[0].preview_url)
+            trackDiv.append(trackAudio);
 
             var title = response.tracks.items[0].name;
             var trackTitle = $("<h3>").text("Title: " + title);
