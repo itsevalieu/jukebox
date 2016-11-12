@@ -1,0 +1,17 @@
+.thumbnail {
+	padding: 0px;
+	border: 0px;
+	margin-bottom: 10px;
+	width:100px;
+}
+
+audio {
+	padding-left: 15px;
+	margin-top: 15px;
+	float: left;
+	width: 90%;
+}
+
+#voteButtons {
+	width: 10%;
+}

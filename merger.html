@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jukebox</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/framework.css">
+</head>
+<body>
+	<!--Banner-->
+	<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+		<div class="navbar-header">
+	    	<a class="navbar-brand" href="#">Jukebox</a>
+	    </div>
+	    <!--Search Bar-->
+	    <form class="navbar-form navbar-right" id="track-form">
+	      	<div class="form-group">
+	        	<input type="text" class="form-control" id="track-input" placeholder="Enter Song Name">
+	        </div>
+	      	<div class="form-group">
+    			<button type="submit" class="btn btn-default" id="addTrack" value="Submit">Add to Queue</button>
+    		</div>
+      	</form>
+	</div>
+	</nav>
+	<!--Content-->
+	<div class="container-fluid">
+		<div class="row">
+			<!--Jukebox and Playlist Container-->
+			<div class="col col-lg-9">
+				<div class="row">
+					<div class="placeholder"></div>
+				</div>
+				<div class="row">
+					<div class="col col-lg-1"></div>
+					<div class="col col-lg-10">
+						<!--Jukebox Section-->
+						<div class="jukebox panel">
+							<div class="panel-heading">
+						    	<h3 class="panel-title">Song Name - Artist Name - Album Name</h3>
+					  		</div>
+							<div class="panel-body">
+					   			<div class="col-lg-10">
+									Jukebox Container
+					   			</div>
+					   			<div id="soundBar">
+					   			<audio controls="controls" src="https://p.scdn.co/mp3-preview/0b90429fd554bad6785faa2b8931d613db4a0ee4"></audio>
+					   			</div>
+					   			<div class="col-lg-2" id="voteButtons">
+					   				<div class="row" id="upVote">
+									<button type="button" class="btn btn-default btn-lg" aria-label="Thumbs Up">
+										<span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+									</button>
+									</div>
+									<div class="row" id="downVote">
+									<button type="button" class="btn btn-default btn-lg" aria-label="Thumbs Down">
+										<span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
+									</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col col-lg-1"></div>
+				</div>
+				<div class="row">
+					<!--Playlist-->
+					<div class="col col-lg-1"></div>
+					<div class="col col-lg-10">
+						<div class="playlist panel">
+							<div class="panel-heading">
+						    	<h3 class="panel-title">Playlist</h3>
+					  		</div>
+							<div class="panel-body">
+					   			<div class="col-xs-6 col-md-3 col-lg-2">
+									<!-- Individual Song in Playlist -->
+					   				<div>
+								    	<img class="thumbnail" id="albumCover" src="https://i.scdn.co/image/797009754c30847254b48de483f256258d90df7f" alt="Adele Placeholder">
+								    	<p class="song" id="songName">Hello</p>
+								    	<p class="artist" id="artistName">Adele</p>
+								    </div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col col-lg-1"></div>
+				</div>
+			</div>
+			<!--Comments Container-->	
+			<div class="col col-lg-3">
+				<div class="comments panel">
+					<div class="panel-heading">
+				    	<h3 class="panel-title">Comments</h3>
+				  	</div>
+					<div class="panel-body">
+				   		<div class="comment-placeholder">
+				   			Comments Section
+				   		</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>2016 Coding Bootcamp BOFE</footer>
+
+	<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+	<script src="spotify.js"></script>
+
+</body>
+</html>
