@@ -1,5 +1,9 @@
+/*-----Whole Document-----*/
 body{
 	background: #666666;
+}
+.container{
+	float: none;
 }
 /*-----Row and Column Outlines-----*/
 .row{
@@ -37,4 +41,14 @@ body{
 }
 .placeholder{
 	height: 100px;
+}
+/*-----Footer-----*/
+footer {
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   width:100%;
+   background:#333;
+   color: white;
+   text-align: center;
 }
