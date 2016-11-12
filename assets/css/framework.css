@@ -1,9 +1,20 @@
 body{
 	background: #666666;
 }
+/*
 .row{
 	border: 1px solid red;
 }
 .col{
 	border: 1px solid blue;
+}
+*/
+.btn{
+	float: right;
+}
+.placeholder{
+	height: 100px;
+}
+.comment-placeholder{
+	height: 500px;
 }
