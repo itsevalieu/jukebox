@@ -1,0 +1,9 @@
+body{
+	background: #666666;
+}
+.row{
+	border: 1px solid red;
+}
+.col{
+	border: 1px solid blue;
+}
