@@ -5,6 +5,9 @@ body{
 .container{
 	float: none;
 }
+.container-fluid{
+	border: 1px solid orange;
+}
 /*-----Row and Column Outlines-----*/
 .row{
 	border: 1px solid red;
@@ -31,6 +34,7 @@ body{
 }
 .comments{
 	background: #333;
+
 }
 /*-----Panels-----*/
 .panel-title, .panel-body{
@@ -51,4 +55,6 @@ footer {
    background:#333;
    color: white;
    text-align: center;
+   padding-top: 10px;
+   padding-bottom: 10px;
 }
