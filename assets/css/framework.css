@@ -1,39 +1,40 @@
 body{
 	background: #666666;
 }
-/*
+/*-----Row and Column Outlines-----*/
 .row{
 	border: 1px solid red;
 }
 .col{
 	border: 1px solid blue;
 }
-*/
+/*-----Navbar-----*/
+
+/*-----JukeBox-----*/
+.jukebox{
+	background: #333;
+}
 .btn{
 	float: right;
 }
-.placeholder{
-	height: 100px;
+/*-----Playlist-----*/
+.playlist{
+	background: #333;
 }
+/*-----Comment-----*/
 .comment-placeholder{
 	height: 500px;
 }
+.comments{
+	background: #333;
+}
+/*-----Panels-----*/
 .panel-title, .panel-body{
 	color: grey;
 }
 .panel-heading{
 	border-bottom: 1px solid #222;
 }
-.jukebox{
-	background: #333;
-}
-.playlist{
-	background: #333;
-}
-.comments{
-	background: #333;
-}
-a, img{
-	height: 50px
-	weight: 50px;
+.placeholder{
+	height: 100px;
 }
