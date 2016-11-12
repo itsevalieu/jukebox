@@ -18,3 +18,22 @@ body{
 .comment-placeholder{
 	height: 500px;
 }
+.panel-title, .panel-body{
+	color: grey;
+}
+.panel-heading{
+	border-bottom: 1px solid #222;
+}
+.jukebox{
+	background: #333;
+}
+.playlist{
+	background: #333;
+}
+.comments{
+	background: #333;
+}
+a, img{
+	height: 50px
+	weight: 50px;
+}

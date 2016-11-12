@@ -14,8 +14,12 @@
 	    	</div>
 	      	<!--Search Bar-->
 	      	<form class="navbar-form navbar-right">
-          		<input type="text" class="form-control" placeholder="Search">
-        		<button type="submit" class="btn btn-default">Submit</button>
+	      		<div class="form-group">
+	          		<input type="text" class="form-control" placeholder="Search">
+	          	</div>
+	          	<div class="form-group">
+        			<button type="submit" class="btn btn-default">Submit</button>
+      			</div>
       		</form>
 	  	</div>
 	</nav>
@@ -28,16 +32,16 @@
 					<div class="placeholder"></div>
 				</div>
 				<div class="row">
-					<!--Jukebox-->
 					<div class="col col-lg-1"></div>
 					<div class="col col-lg-10">
-						<div class="panel panel-primary">
+						<!--Jukebox Section-->
+						<div class="jukebox panel">
 							<div class="panel-heading">
-						    	<h3 class="panel-title">Jukebox</h3>
+						    	<h3 class="panel-title">Song Name - Artist Name - Album Name</h3>
 					  		</div>
 							<div class="panel-body">
 					   			<div class="col-lg-10">
-									Jukebox
+									Jukebox Container
 					   			</div>
 					   			<div class="col-lg-2">
 					   				<div class="row">
@@ -60,12 +64,12 @@
 					<!--Playlist-->
 					<div class="col col-lg-1"></div>
 					<div class="col col-lg-10">
-						<div class="panel panel-primary">
+						<div class="playlist panel">
 							<div class="panel-heading">
 						    	<h3 class="panel-title">Playlist</h3>
 					  		</div>
 							<div class="panel-body">
-					   			<div class="col-xs-6 col-md-3">
+					   			<div class="col-xs-6 col-md-3 col-lg-2">
 									<a href="#" class="thumbnail">
 								    	<img src="..." alt="...">
 									</a>
@@ -78,13 +82,14 @@
 			</div>
 			<!--Comments Container-->	
 			<div class="col col-lg-3">
-				<div class="panel panel-default">
+				<div class="comments panel">
 					<div class="panel-heading">
 				    	<h3 class="panel-title">Comments</h3>
 				  	</div>
 					<div class="panel-body">
-				   		Panel content
-				   		<div class="comment-placeholder"></div>
+				   		<div class="comment-placeholder">
+				   			Comments Section
+				   		</div>
 					</div>
 				</div>
 			</div>
