@@ -9,11 +9,12 @@
  firebase.initializeApp(config);
  var database = firebase.database();
  $(document).ready(function () {
-	 var userName = "";
-	 var userLogIn = "";
+	 "use strict";
+	 pullChatLog();
+ 	var userName = "";
+ 	var userLogIn = "";
  	//Modal Login for Chat Functions and Firebase User Creation
  	$("#loginButton").on("click", function () {
- 		"use strict";
  		userLogIn = $("#userId").val().trim();
  		userName = $("#userName").val().trim();
  		writeUserData(userLogIn, userName);
@@ -25,27 +26,28 @@
 
  	//Chat Send Button Functionality
  	$("#userSend").on("click", function () {
- 		"use strict";
  		console.log("You clicked the Send Button.");
-		//this functionality is repeated below - break it into a function
+ 		//this functionality is repeated below - break it into a function
  		var input = $("#userChatInput").val().trim();
- 		console.log(input);
- 		chatSubmit(input);
- 		$("#mainWindow").append(userName + ": " + input + "<br>");
+ 		var entry = userName + ": " + input;
+ 		console.log(entry);
+ 		chatSubmit(entry);
+ 		//$("#mainWindow").append("<p>" + entry + "</p>");
  		$("#userChatInput").val("");
  		return false;
  	});
-	 
-	//Catches userChatInput if 'Enter' key is pressed instead of 'Send' button
+
+ 	//Catches userChatInput if 'Enter' key is pressed instead of 'Send' button
  	$(document).keypress(function (e) {
- 		"use strict";
  		if (e.which === 13) {
  			console.log("You hit the enter button.");
-			//this functionality is repeated above - break it into a function
+ 			//this functionality is repeated above - break it into a function
  			var input = $("#userChatInput").val().trim();
- 			console.log(input);
-			chatSubmit(input);
- 			$("#mainWindow").append(userName + ": " + input + "<br>");
+ 			var entry = userName + ": " + input;
+ 			console.log(entry);
+ 			chatSubmit(entry);
+ 			//$("#mainWindow").append("<p>" + entry + "</p>");
+
  			$("#userChatInput").val("");
  			return false;
  		}
@@ -53,7 +55,7 @@
 
  });
 
-//writes user login data to firebase database
+ //writes user login data to firebase database
  function writeUserData(userId, name) {
  	"use strict";
  	firebase.database().ref('users/' + userId).set({
@@ -62,14 +64,23 @@
  	});
  }
 
-//
+ //
  function chatSubmit(userInput) {
  	"use strict";
  	firebase.database().ref('chatlog/').push(userInput);
  }
 
  function pullChatLog() {
- 	firebase.database(snapshot).on("value", function () {
- 		"use strict";
+	 "use strict";
+ 	database.ref().on("value", function (snapshot) {
+		$("#mainWindow").empty();
+		var chatHistory = snapshot.child("chatlog").val();
+		$.each(chatHistory, function(i, l){
+			console.log(l);
+			$("#mainWindow").append("<p>" + l + "</p>");
+		});
+		//console.log(chatHistory);
+		$("#mainWindow").scrollTop($("#mainWindow")[0].scrollHeight);
+		
  	});
  }
