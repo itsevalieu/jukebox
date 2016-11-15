@@ -1,25 +1,46 @@
 @charset "UTF-8";
+
+/*Container Outlines*/
+/*
+#mainWindow, #chatBar, #userChatInput{
+	border: solid 1px green;
+}
+*/
+
 /* CSS Document */
 
+/* Modal */
+.btn-md{
+	margin: 0px 0px;
+	display: inline-block;
+}
+
+
+/* Chat Box */
 #mainWindow{
 	float: left;
 	display: inline-block;
 	width: 100%;
-	height: 500px;
-	border: solid 1px black;
+	height: 394px;
+	background: white;
 }
 #chatBar{
 	clear: both;
 	float: left;
 	display: inline-block;
-	width: 80%;
+	width: 100%;
 	height: 150px;
-	border: solid 1px red;
+	background: grey;
 }
-#chatSubmit{
+#userChatInput{
+	margin-top: 10px;
+	margin-left: 10px;
 	float: left;
 	display: inline-block;
-	width: 15%;
-	height: 150px;
-	border: solid 1px blue;
+	width: 80%;
+	height: 130px;
+}
+#userSend{
+	margin-top: 115px;
+	margin-left: 10px;
 }
