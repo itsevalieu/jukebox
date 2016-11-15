@@ -5,11 +5,11 @@ body{
 body, html{
 	height: 100%;
 }
-
+/*
 .container-fluid{
 	border: 1px solid orange;
 }
-
+*/
 /*-----Row and Column Outlines-----*/
 /*
 .row{
@@ -40,12 +40,11 @@ body, html{
 	padding-right: 0;
 	padding-left: 0;
 	height: 100%;
-	width: 371.945px;
+	width: 380px;
 	position: fixed;
 	right: 0px;
 	top: 54px;
-}
-.comment-placeholder{
+	border: 2px solid black;
 }
 .comments{
 	background: #333;
@@ -56,12 +55,15 @@ body, html{
 /*-----Panels-----*/
 .panel-title, .panel-body{
 	color: grey;
+	padding-top: 10px;
 }
 .panel-body{
 	padding: 0px;
 }
 .panel-heading{
 	border-bottom: 1px solid #222;
+	padding-top: 0px;
+	padding-right: 0px;
 }
 .placeholder{
 	height: 100px;
