@@ -12,10 +12,9 @@
 /* Modal */
 .btn-md{
 	margin-top: 2.5px;
-	margin-right: 2.5px;
+	margin-right: 10px;
 	float: right;
 	font-weight: bolder;
-	padding-top: 5px;
 }
 
 
@@ -24,33 +23,43 @@
 	float: left;
 	display: inline-block;
 	width: 360px;
-	height: 425px;
+	height: 470px;
 	background: white;
 	border: 1px solid black;
 	border-radius: 6px;
 	margin: 2px 6px 2px 6px;
+	padding: 5px 5px 5px 5px;
 }
 #chatBar{
 	clear: both;
 	float: left;
 	display: inline-block;
 	width: 100%;
-	height: 150px;
+	height: 100px;
 	background: #444444;
 }
 #userChatInput{
 	margin-top: 10px;
 	margin-left: 6px;
 	float: left;
-	display: inline-block;
 	width: 80%;
-	height: 130px;
+	height: 80px;
 	border: 1px solid grey;
 	border-radius: 6px;
+	padding: 5px 5px 5px 5px;
 }
 #userSend{
-	margin-top: 115px;
+	margin-top: 40px;
 	margin-left: 10px;
 	border-radius: 6px;
 	font-weight: bold;
+	color: black;
 }
+
+/* Issues
+
+1. Need to make sure chatbox comments doesn't run over, delete previous or add scroll?
+2. Get rid of colon in chatbox
+3. Comments bar, user input is in middle of box. Why?
+4. Differentiate user text with different colors? Addon
+*/

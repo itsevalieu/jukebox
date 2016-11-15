@@ -20,6 +20,9 @@ body, html{
 }
 */
 /*-----Navbar-----*/
+.navbar-form{
+	width: 390px;
+}
 .navbar{
 	margin-bottom: 0;
 	border-radius: 0;
@@ -39,9 +42,9 @@ body, html{
 .comment-container{
 	padding-right: 0;
 	padding-left: 0;
-	height: 100%;
+
 	width: 380px;
-	position: fixed;
+	position: absolute;
 	right: 0px;
 	top: 54px;
 	border: 2px solid black;
@@ -70,7 +73,7 @@ body, html{
 }
 /*-----Footer-----*/
 footer {
-	z-index: 0;
+	z-index: 1;
 	position: fixed;
 	left: 0px;
 	bottom: 0px;
