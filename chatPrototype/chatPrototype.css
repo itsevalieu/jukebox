@@ -29,6 +29,7 @@
 	border-radius: 6px;
 	margin: 2px 6px 2px 6px;
 	padding: 5px 5px 5px 5px;
+	overflow: scroll;
 }
 #chatBar{
 	clear: both;
@@ -58,7 +59,7 @@
 
 /* Issues
 
-1. Need to make sure chatbox comments doesn't run over, delete previous or add scroll?
+1. Need to make sure chatbox comments doesn't run over, delete previous or add scroll? RESOLVED
 2. Get rid of colon in chatbox
 3. Comments bar, user input is in middle of box. Why?
 4. Differentiate user text with different colors? Addon

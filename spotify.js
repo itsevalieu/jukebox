@@ -4,7 +4,7 @@ $(document).ready(function(){
 
         $("#trackView").empty();
         
-        var track = $("#track-input").val().trim();
+        var track = trackEntered;
         var queryURL = "https://api.spotify.com/v1/search?q=" + track + "&type=track&limit=1";   
 
         $.ajax({url: queryURL, method: "GET"}).done(function(response) {    
@@ -30,11 +30,38 @@ $(document).ready(function(){
             var trackArtist = $("<h3>").text("Artist: " + artist);
             trackDiv.append(trackArtist);
 
-            $("#trackView").append(trackDiv);
-                
+            $("#trackView").append(trackDiv);  
+
+            purchaseTrack(title, artist);    
         });
     }
 
+    function purchaseTrack(tTitle, tArtist){
+        
+        var iTunesTitle = tTitle;
+    //    var iTunesArtist = tArtist;
+    //    var queryURLItunes = "https://itunes.apple.com/search?term=" + iTunesTitle + iTunesArtist + "&limit=1";
+        var queryURLItunes = "https://itunes.apple.com/search?term=" + iTunesTitle + "&limit=1";
+
+        $.ajax({url: queryURLItunes, jsonp: "callback", dataType: "jsonp", method: "GET"}).done(function(response1){
+
+    //    console.log(response1);
+
+            var iTunesTitleDiv = $("<div>");
+            iTunesTitleDiv.addClass("iTunesTitleHolder");  
+
+            var link = response1.results[0].trackViewUrl;
+            var trackCost = $("<h3>").text("Purchase Link: " + link);
+            iTunesTitleDiv.append(trackCost);   
+
+            var cost = response1.results[0].trackPrice;
+            var trackCost = $("<h3>").text("Price: " + cost);
+            iTunesTitleDiv.append(trackCost);   
+
+            $("#trackView").append(iTunesTitleDiv);  
+        });
+    }
+        
     $("#addTrack").on("click", function(){
 
         var track = $("#track-input").val().trim();
