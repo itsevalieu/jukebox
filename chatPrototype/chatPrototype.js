@@ -8,14 +8,15 @@
  };
  firebase.initializeApp(config);
  var database = firebase.database();
- var listRef = new Firebase("https://spotifyjukebox-afcf8.firebaseio.com/presence/");
- var userRef = listRef.push();
  $(document).ready(function () {
  	"use strict";
  	pullChatLog();
- 	var userName = "Anonymous";
+ 	if (localStorage.getItem("userName") === null) {
+ 		var userName = "Anonymous";
+ 	} else {
+ 		userName = localStorage.userName;
+ 	}
  	var input = "";
-
  	//Modal Login for Chat Functions and Firebase User Creation
  	$("#loginButton").on("click", function () {
  		userName = setUserName();
@@ -25,6 +26,7 @@
  	//Chat Send Button Functionality
  	$("#userSend").on("click", function () {
  		console.log("You clicked the Send Button.");
+ 		//this functionality is repeated below - break it into a function
  		input = $("#userChatInput").val().trim();
  		pullChatInput(input, userName);
  		return false;
@@ -43,27 +45,28 @@
  });
 
  //writes user login data to firebase database
- function writeUserData(userId, name) {
+ function writeUserData(name) {
  	"use strict";
- 	firebase.database().ref('users/' + userId).set({
+ 	firebase.database().ref('users/' + name).set({
  		username: name,
 
  	});
  }
 
- //
+ //takes userInput and commits to Firebase chatlog
  function chatSubmit(userInput) {
  	"use strict";
  	firebase.database().ref('chatlog/').push(userInput);
  }
 
+//initial and iterative chatlog pulls to chat history
  function pullChatLog() {
  	"use strict";
  	database.ref().on("value", function (snapshot) {
  		$("#mainWindow").empty();
  		var chatHistory = snapshot.child("chatlog").val();
  		$.each(chatHistory, function (i, l) {
- 			console.log(l);
+ 			//console.log(l);
  			$("#mainWindow").append("<p>" + l + "</p>");
  		});
  		//console.log(chatHistory);
@@ -72,21 +75,22 @@
  	});
  }
 
+//takes userName and sets for chat handle + saves to localStorage for data persist
  function setUserName(userName) {
  	"use strict";
- 	var userLogIn = $("#userId").val().trim();
  	userName = $("#userName").val().trim();
- 	writeUserData(userLogIn, userName);
- 	$("#userId").val("");
+ 	writeUserData(userName);
  	$("#userName").val("");
  	$("#myModal").modal("hide");
  	console.log("User name has been set to " + userName);
+ 	localStorage.userName = userName;
  	return userName;
  }
 
+//takes userName and userInput and posts into Firebase chatlog
  function pullChatInput(input, userName) {
  	"use strict";
- 	if ($("#myModal").attr("style") === "display:block") {
+ 	if ($("#myModal").attr("style") === "display: block") {
  		console.log("Modal is open");
  	} else {
  		input = $("#userChatInput").val().trim();
