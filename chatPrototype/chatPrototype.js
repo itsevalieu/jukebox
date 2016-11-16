@@ -9,17 +9,14 @@
  firebase.initializeApp(config);
  var database = firebase.database();
  $(document).ready(function () {
-
  	"use strict";
  	pullChatLog();
-	 if (localStorage.getItem("userName")===null){
-	 	var userName = "Anonymous";
-	 
-	 }
-	 else{
-		 userName = localStorage.userName;
-	 } 	
-	 var input = "";
+ 	if (localStorage.getItem("userName") === null) {
+ 		var userName = "Anonymous";
+ 	} else {
+ 		userName = localStorage.userName;
+ 	}
+ 	var input = "";
  	//Modal Login for Chat Functions and Firebase User Creation
  	$("#loginButton").on("click", function () {
  		userName = setUserName();
@@ -56,19 +53,20 @@
  	});
  }
 
- //
+ //takes userInput and commits to Firebase chatlog
  function chatSubmit(userInput) {
  	"use strict";
  	firebase.database().ref('chatlog/').push(userInput);
  }
 
+//initial and iterative chatlog pulls to chat history
  function pullChatLog() {
  	"use strict";
  	database.ref().on("value", function (snapshot) {
  		$("#mainWindow").empty();
  		var chatHistory = snapshot.child("chatlog").val();
  		$.each(chatHistory, function (i, l) {
- 			console.log(l);
+ 			//console.log(l);
  			$("#mainWindow").append("<p>" + l + "</p>");
  		});
  		//console.log(chatHistory);
@@ -77,17 +75,19 @@
  	});
  }
 
+//takes userName and sets for chat handle + saves to localStorage for data persist
  function setUserName(userName) {
  	"use strict";
  	userName = $("#userName").val().trim();
  	writeUserData(userName);
  	$("#userName").val("");
  	$("#myModal").modal("hide");
-	 console.log("User name has been set to " + userName);
-	 localStorage.userName = userName;
-	 return userName;
+ 	console.log("User name has been set to " + userName);
+ 	localStorage.userName = userName;
+ 	return userName;
  }
 
+//takes userName and userInput and posts into Firebase chatlog
  function pullChatInput(input, userName) {
  	"use strict";
  	if ($("#myModal").attr("style") === "display: block") {
