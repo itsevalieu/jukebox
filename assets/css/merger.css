@@ -1,8 +1,16 @@
 .thumbnail {
 	padding: 0px;
 	border: 0px;
-	margin-bottom: 10px;
-	width:100px;
+	margin: 10px;
+	width: 100px;
+}
+
+.song {
+	margin-left: 10px;
+}
+
+.artist {
+	margin-left: 10px;
 }
 
 audio {
@@ -15,3 +23,4 @@ audio {
 #voteButtons {
 	width: 10%;
 }
+
