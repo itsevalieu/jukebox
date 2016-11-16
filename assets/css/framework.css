@@ -38,11 +38,15 @@ body, html{
 .playlist{
 	background: #333;
 }
+.thumbnail-row{
+	width: auto;
+	overflow-x: scroll;
+	overflow-y: hidden;	
+}
 /*-----Comment-----*/
 .comment-container{
 	padding-right: 0;
 	padding-left: 0;
-
 	width: 380px;
 	position: absolute;
 	right: 0px;
@@ -55,6 +59,7 @@ body, html{
 	height: 100%;
 	border-radius: 0;
 }
+
 /*-----Panels-----*/
 .panel-title, .panel-body{
 	color: grey;
@@ -83,4 +88,30 @@ footer {
 	text-align: center;
 	padding-top: 10px;
 	padding-bottom: 10px;
+}
+
+
+	/*Media Queries for Chatbox*/
+@media screen and (max-width: 960px){
+	.comments{
+		background: #333;
+		width: 100%;
+		height: 100%;
+		border-radius: 0;
+	}
+	.comment-container{
+		padding-right: 0;
+		padding-left: 0;
+		width: 380px;
+		position: absolute;
+		bottom: 0px;
+		left: 0px;
+		border: 2px solid black;
+	}
+
+}	
+@media screen and (max-width: 768px){
+}
+@media screen and (max-width: 640px){
+
 }

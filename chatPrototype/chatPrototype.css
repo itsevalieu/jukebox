@@ -16,8 +16,16 @@
 	float: right;
 	font-weight: bolder;
 }
-
-
+/*
+.modal-dialog {
+    width: 360px;
+    height: 470px;
+    position: relative;
+    margin: 0px 0px;
+    top: 50px;
+    left: 700px;
+}
+*/
 /* Chat Box */
 #mainWindow{
 	float: left;
@@ -36,7 +44,7 @@
 	float: left;
 	display: inline-block;
 	width: 100%;
-	height: 100px;
+	height: 101px;
 	background: #444444;
 }
 #userChatInput{
@@ -57,6 +65,62 @@
 	color: black;
 }
 
+@media screen and (max-width: 1000px){
+	.comments{
+		background: #333;
+		width: 100%;
+		height: 300px;
+		border-radius: 0;
+	}
+	.comment-container{
+		padding-right: 0;
+		padding-left: 0;
+		width: 100%;
+		height: 300px;
+		position: absolute;
+		bottom: 0px;
+		left: 0px;
+		border: 2px solid black;
+	}
+	#mainWindow{
+		float: left;
+		display: inline-block;
+		width: 95%;
+		height: 250px;
+		background: white;
+		border: 1px solid black;
+		border-radius: 6px;
+		margin: 2px 6px 2px 6px;
+		padding: 5px 5px 5px 5px;
+		overflow: scroll;
+	}
+	#chatBar{
+		clear: both;
+		float: left;
+		display: inline-block;
+		width: 100%;
+		height: 100px;
+		background: #444444;
+	}
+	#userChatInput{
+		margin-top: 10px;
+		margin-left: 6px;
+		float: left;
+		width: 80%;
+		height: 50px;
+		border: 1px solid grey;
+		border-radius: 6px;
+		padding: 5px 5px 5px 5px;
+	}
+	#userSend{
+		margin-top: 40px;
+		margin-left: 10px;
+		border-radius: 6px;
+		font-weight: bold;
+		color: black;
+	}
+
+}
 /* Issues
 
 1. Need to make sure chatbox comments doesn't run over, delete previous or add scroll? RESOLVED
