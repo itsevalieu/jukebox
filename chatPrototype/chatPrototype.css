@@ -31,7 +31,7 @@
 	float: left;
 	display: inline-block;
 	width: 360px;
-	height: 470px;
+	height: 80%;
 	background: white;
 	border: 1px solid black;
 	border-radius: 6px;
@@ -39,12 +39,15 @@
 	padding: 5px 5px 5px 5px;
 	overflow: scroll;
 }
+#chatContainer{
+	height: 90%;
+}
 #chatBar{
 	clear: both;
 	float: left;
 	display: inline-block;
 	width: 100%;
-	height: 101px;
+	height: 100%;
 	background: #444444;
 }
 #userChatInput{
@@ -52,7 +55,7 @@
 	margin-left: 6px;
 	float: left;
 	width: 80%;
-	height: 80px;
+	height: 100px;
 	border: 1px solid grey;
 	border-radius: 6px;
 	padding: 5px 5px 5px 5px;
@@ -64,67 +67,3 @@
 	font-weight: bold;
 	color: black;
 }
-
-@media screen and (max-width: 1000px){
-	.comments{
-		background: #333;
-		width: 100%;
-		height: 300px;
-		border-radius: 0;
-	}
-	.comment-container{
-		padding-right: 0;
-		padding-left: 0;
-		width: 100%;
-		height: 300px;
-		position: absolute;
-		bottom: 0px;
-		left: 0px;
-		border: 2px solid black;
-	}
-	#mainWindow{
-		float: left;
-		display: inline-block;
-		width: 95%;
-		height: 250px;
-		background: white;
-		border: 1px solid black;
-		border-radius: 6px;
-		margin: 2px 6px 2px 6px;
-		padding: 5px 5px 5px 5px;
-		overflow: scroll;
-	}
-	#chatBar{
-		clear: both;
-		float: left;
-		display: inline-block;
-		width: 100%;
-		height: 100px;
-		background: #444444;
-	}
-	#userChatInput{
-		margin-top: 10px;
-		margin-left: 6px;
-		float: left;
-		width: 80%;
-		height: 50px;
-		border: 1px solid grey;
-		border-radius: 6px;
-		padding: 5px 5px 5px 5px;
-	}
-	#userSend{
-		margin-top: 40px;
-		margin-left: 10px;
-		border-radius: 6px;
-		font-weight: bold;
-		color: black;
-	}
-
-}
-/* Issues
-
-1. Need to make sure chatbox comments doesn't run over, delete previous or add scroll? RESOLVED
-2. Get rid of colon in chatbox
-3. Comments bar, user input is in middle of box. Why?
-4. Differentiate user text with different colors? Addon
-*/

@@ -1,6 +1,7 @@
 /*-----Whole Document-----*/
 body{
 	background: #666666;
+	overflow: hidden;
 }
 body, html{
 	height: 100%;
@@ -44,20 +45,27 @@ body, html{
 	overflow-y: hidden;	
 }
 /*-----Comment-----*/
+.comment-placeholder{
+	height: 95%;
+	overflow: hidden;
+}
 .comment-container{
 	padding-right: 0;
 	padding-left: 0;
 	width: 380px;
+	height: 95%;
 	position: absolute;
 	right: 0px;
-	top: 54px;
+	top: 51px;
 	border: 2px solid black;
+	overflow: hidden;
 }
 .comments{
 	background: #333;
 	width: 100%;
 	height: 100%;
 	border-radius: 0;
+	overflow: hidden;
 }
 
 /*-----Panels-----*/
@@ -67,6 +75,7 @@ body, html{
 }
 .panel-body{
 	padding: 0px;
+	height: 100%;
 }
 .panel-heading{
 	border-bottom: 1px solid #222;
@@ -93,22 +102,7 @@ footer {
 
 	/*Media Queries for Chatbox*/
 @media screen and (max-width: 960px){
-	.comments{
-		background: #333;
-		width: 100%;
-		height: 100%;
-		border-radius: 0;
-	}
-	.comment-container{
-		padding-right: 0;
-		padding-left: 0;
-		width: 380px;
-		position: absolute;
-		bottom: 0px;
-		left: 0px;
-		border: 2px solid black;
-	}
-
+	
 }	
 @media screen and (max-width: 768px){
 }
