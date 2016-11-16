@@ -8,25 +8,28 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="assets/css/framework.css">
 	<link rel="stylesheet" href="chatPrototype/chatPrototype.css">
-	<link rel="stylesheet" href="assets/css/merger.css">
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+	<link rel="stylesheet" href="assets/css/merger.css">
+
 </head>
 <body>
 	<!--Banner-->
 	<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
 			<div class="navbar-header">
-	    		<a class="navbar-brand" href="#">Jukebox</a>
+
+	    		<img class="navbar-brand" id="navbar-image" href="#" src="assets/images/jukebox_logo_white.png" alt="Jukebox"></img>
 	    	</div>
 	      	<!--Search Bar-->
-	      	<form class="navbar-form navbar-right">
-	      		<div class="form-group">
-	          		<input type="text" class="searchbar form-control" placeholder="Search">
-	          	</div>
-	          	<div class="form-group">
-        			<button type="submit" class="btn btn-default">Submit</button>
-      			</div>
+	      	<form class="pure-form" id="navbarSearchForm">
+	      			<fieldset>
+	          		<input type="text" class="searchbar" placeholder="Search">
+        			<button type="submit" class="pure-button">Submit</button>
+        			</fieldset>
       		</form>
 	  	</div>
 	</nav>
@@ -48,7 +51,6 @@
 					  		</div>
 							<div class="panel-body">
 					   			<div class="col-lg-10">
-									Jukebox Container
 					   			</div>
 					   			<div id="soundBar">
 					   			<audio controls="controls" src="https://p.scdn.co/mp3-preview/0b90429fd554bad6785faa2b8931d613db4a0ee4"></audio>
@@ -98,10 +100,10 @@
 				<div class="comments panel">
 					<div class="panel-heading">
 					<!-- Trigger the modal with a button -->
-						<button type="button" class="btn btn-md" data-toggle="modal" data-target="#myModal">User Login</button>
-				    	<h3 class="panel-title">Comments</h3>
+						<button type="button" class="modal-button pure-button pure-button-primary" data-toggle="modal" data-target="#myModal">Login</button>
+				    	<h3 class="panel-title">Live Chat</h3>
 				  	</div>
-					<div class="panel-body">
+					<div class="panel-body comments-body">
 				   		<div class="comment-placeholder">
 			   			 <!--Begin Modal and Chatbox-->
 							<div id="chatContainer">
@@ -121,19 +123,17 @@
 						      		<div class="modal-content">
 						        		<div class="modal-header">
 						          			<button type="button" class="close" data-dismiss="modal">&times;</button>
-						        			<h4 class="modal-title">Modal Header</h4>
+
+						        			<img class="modal-title" src="assets/images/jukebox_logo_black.png" alt="Jukebox"></img>
 						        		</div>
 							        	<div class="modal-body">
-							          		<form>
-							          		User ID:<br>
-							          		<input type="text" id="userId" name="userId"><br>
-							          		User Name:<br>
+							          		<form class="form-inline">
+							          		<label for="userName">Create Username:</label>
 									        	<input type="text" id="userName" name="userName"><br>
-									        	<input type="button" class="btn btn-danger" value="Login" id="loginButton" data-dismiss="modal">
+									        	<button type="button" class="pure-button pure-button-primary" value="Login" id="loginButton" data-dismiss="modal">Login</button>
 											</form>
 							        	</div>
-						        		<div class="modal-footer">
-						          			<button id="" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
 								        </div>
 						      		</div>
 						    	</div>
@@ -142,6 +142,7 @@
 					</div> <!--/panel-body-->
 				</div> <!--/comments panel-->
 			</div><!--/comment-container-->
+
 		</div><!--/row-->
 	</div> <!--/container-fluid-->
 	<footer>2016 Coding Bootcamp BOFE</footer>
