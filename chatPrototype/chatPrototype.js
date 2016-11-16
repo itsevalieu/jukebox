@@ -9,18 +9,14 @@
  firebase.initializeApp(config);
  var database = firebase.database();
  $(document).ready(function () {
-	 "use strict";
-	 pullChatLog();
- 	var userName = "";
- 	var userLogIn = "";
+ 	"use strict";
+ 	pullChatLog();
+ 	var userName = "Anonymous";
+ 	var input = "";
+	 
  	//Modal Login for Chat Functions and Firebase User Creation
  	$("#loginButton").on("click", function () {
- 		userLogIn = $("#userId").val().trim();
- 		userName = $("#userName").val().trim();
- 		writeUserData(userLogIn, userName);
- 		$("#userId").val("");
- 		$("#userName").val("");
- 		$("#myModal").modal("hide");
+ 		userName = setUserName();
  		return false;
  	});
 
@@ -28,12 +24,8 @@
  	$("#userSend").on("click", function () {
  		console.log("You clicked the Send Button.");
  		//this functionality is repeated below - break it into a function
- 		var input = $("#userChatInput").val().trim();
- 		var entry = userName + ": " + input;
- 		console.log(entry);
- 		chatSubmit(entry);
- 		//$("#mainWindow").append("<p>" + entry + "</p>");
- 		$("#userChatInput").val("");
+ 		input = $("#userChatInput").val().trim();
+ 		pullChatInput(input, userName);
  		return false;
  	});
 
@@ -42,13 +34,8 @@
  		if (e.which === 13) {
  			console.log("You hit the enter button.");
  			//this functionality is repeated above - break it into a function
- 			var input = $("#userChatInput").val().trim();
- 			var entry = userName + ": " + input;
- 			console.log(entry);
- 			chatSubmit(entry);
- 			//$("#mainWindow").append("<p>" + entry + "</p>");
-
- 			$("#userChatInput").val("");
+ 			input = $("#userChatInput").val().trim();
+ 			pullChatInput(input, userName);
  			return false;
  		}
  	});
@@ -71,16 +58,48 @@
  }
 
  function pullChatLog() {
-	 "use strict";
+ 	"use strict";
  	database.ref().on("value", function (snapshot) {
-		$("#mainWindow").empty();
-		var chatHistory = snapshot.child("chatlog").val();
-		$.each(chatHistory, function(i, l){
-			console.log(l);
-			$("#mainWindow").append("<p>" + l + "</p>");
-		});
-		//console.log(chatHistory);
-		$("#mainWindow").scrollTop($("#mainWindow")[0].scrollHeight);
-		
+ 		$("#mainWindow").empty();
+ 		var chatHistory = snapshot.child("chatlog").val();
+ 		$.each(chatHistory, function (i, l) {
+ 			console.log(l);
+ 			$("#mainWindow").append("<p>" + l + "</p>");
+ 		});
+ 		//console.log(chatHistory);
+ 		$("#mainWindow").scrollTop($("#mainWindow")[0].scrollHeight);
+
  	});
+ }
+
+ function setUserName(userName) {
+ 	"use strict";
+ 	var userLogIn = $("#userId").val().trim();
+ 	userName = $("#userName").val().trim();
+ 	writeUserData(userLogIn, userName);
+ 	$("#userId").val("");
+ 	$("#userName").val("");
+ 	$("#myModal").modal("hide");
+	 console.log("User name has been set to " + userName);
+	 return userName;
+ }
+
+ function pullChatInput(input, userName) {
+ 	"use strict";
+ 	if ($("#myModal").attr("style") === "display:block") {
+ 		console.log("Modal is open");
+ 	} else {
+ 		//console.log("Modal is closed");
+ 		input = $("#userChatInput").val().trim();
+ 		if (input === "") {
+ 			console.log("You didn't enter anything");
+ 		} else {
+ 			var entry = userName + ": " + input;
+ 			console.log(entry);
+ 			chatSubmit(entry);
+ 			//$("#mainWindow").append("<p>" + entry + "</p>");
+
+ 			$("#userChatInput").val("");
+ 		}
+ 	}
  }
