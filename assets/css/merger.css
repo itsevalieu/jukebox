@@ -17,10 +17,48 @@ audio {
 	padding-left: 15px;
 	margin-top: 15px;
 	float: left;
-	width: 90%;
+	width: 85%;
 }
 
 #voteButtons {
 	width: 10%;
 }
 
+.modal-title {
+	float: left;
+	height: 25px;
+}
+
+p, h1, h2, h3, label, footer, {
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+.panel-title, .panel-body{
+	color: white;
+	padding-top: 10px;
+}
+
+.comments-body {
+	color: black;
+	padding-top: 10px;
+}
+
+.modal-dialog {
+	width: 400px;
+	padding-top: 100px;
+}
+
+.modal-button {
+	margin-top: 2.5px;
+	margin-right: 10px;
+	float: right;
+}
+
+#navbarSearchForm {
+	margin-top: 4px;
+	float: right;
+}
+
+#navbar-image {
+	height: 60px;
+}
