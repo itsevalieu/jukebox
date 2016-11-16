@@ -23,7 +23,6 @@
  	//Chat Send Button Functionality
  	$("#userSend").on("click", function () {
  		console.log("You clicked the Send Button.");
- 		//this functionality is repeated below - break it into a function
  		input = $("#userChatInput").val().trim();
  		pullChatInput(input, userName);
  		return false;
@@ -33,7 +32,6 @@
  	$(document).keypress(function (e) {
  		if (e.which === 13) {
  			console.log("You hit the enter button.");
- 			//this functionality is repeated above - break it into a function
  			input = $("#userChatInput").val().trim();
  			pullChatInput(input, userName);
  			return false;
@@ -89,7 +87,6 @@
  	if ($("#myModal").attr("style") === "display:block") {
  		console.log("Modal is open");
  	} else {
- 		//console.log("Modal is closed");
  		input = $("#userChatInput").val().trim();
  		if (input === "") {
  			console.log("You didn't enter anything");
@@ -97,8 +94,6 @@
  			var entry = userName + ": " + input;
  			console.log(entry);
  			chatSubmit(entry);
- 			//$("#mainWindow").append("<p>" + entry + "</p>");
-
  			$("#userChatInput").val("");
  		}
  	}
