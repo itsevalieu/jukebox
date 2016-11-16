@@ -8,12 +8,14 @@
  };
  firebase.initializeApp(config);
  var database = firebase.database();
+ var listRef = new Firebase("https://spotifyjukebox-afcf8.firebaseio.com/presence/");
+ var userRef = listRef.push();
  $(document).ready(function () {
  	"use strict";
  	pullChatLog();
  	var userName = "Anonymous";
  	var input = "";
-	 
+
  	//Modal Login for Chat Functions and Firebase User Creation
  	$("#loginButton").on("click", function () {
  		userName = setUserName();
@@ -78,8 +80,8 @@
  	$("#userId").val("");
  	$("#userName").val("");
  	$("#myModal").modal("hide");
-	 console.log("User name has been set to " + userName);
-	 return userName;
+ 	console.log("User name has been set to " + userName);
+ 	return userName;
  }
 
  function pullChatInput(input, userName) {
