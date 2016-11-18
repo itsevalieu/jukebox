@@ -52,12 +52,12 @@ function queryTrack(trackEntered){
         trackImage.attr("class", "jpg");
         $("#albumCover").append(trackImage);
 
-        // parse audio from object
+/*        // parse audio from object
         var trackAudio = $("<audio>");
         trackAudio.attr("controls", true);
         trackAudio.attr("src", response.tracks.items[0].preview_url)
         $("#soundBar").append(trackAudio);
-
+*/
         // parse title from object
         var title = response.tracks.items[0].name;
         var trackTitle = $("<h3>").text("Title: " + title);
