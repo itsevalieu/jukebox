@@ -1,98 +1,125 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 	<meta charset="UTF-8">
+	
 	<title>Project 1 - Jukebox</title>
+
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/3.6.0/firebase.js"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylesheet" href="assets/css/framework.css">
-	<link rel="stylesheet" href="chatPrototype/chatPrototype.css">
-
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
 	<link rel="stylesheet" href="assets/css/merger.css">
 
 </head>
+
 <body>
-	<!--Banner-->
+
+	<!-- Navbar -->
 	<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
+
 			<div class="navbar-header">
-	    		<img class="navbar-brand" id="navbar-image" href="#" src="assets/images/jukebox_logo_white.png" alt="Jukebox"></img>
-	    	</div>
-	      	<!--Search Bar-->
-	      	<form class="pure-form" id="navbarSearchForm">
-	      			<fieldset>
-	          			<input id="track-input" type="text" class="searchbar" placeholder="Search">
-        				<button id="addTrack" type="submit" class="pure-button">Submit</button>
-        			</fieldset>
-      		</form>
-	  	</div>
+		    	<img class="navbar-brand" id="navbar-image" href="#" src="assets/images/jukebox_logo_white.png" alt="Jukebox"></img>
+		    </div>
+
+			<form class="pure-form" id="navbarSearchForm">
+		      	<fieldset>
+	          		<input id="track-input" type="text" class="searchbar" placeholder="Search">
+	        		<button id="addTrack" type="submit" class="pure-button">Submit</button>
+	        	</fieldset>
+	      	</form>
+		  	
+		</div>
 	</nav>
-	<!--Content-->
+
+	<!-- Jukebox -->
 	<div class="container-fluid">
 		<div class="row">
-			<!--Jukebox and Playlist Container-->
 			<div class="col col-lg-9">
+			
 				<div class="row">
 					<div class="placeholder"></div>
 				</div>
+
 				<div class="row">
 					<div class="col col-lg-1"></div>
-					<div class="col col-lg-10">
-						<!--Jukebox Section-->
-						<div class="jukebox panel">
-							<div class="panel-heading">
-						    	<div id="titleName" class="panel-title"></div>
-					  		</div>
-							<div class="panel-body sound-body">
-					   			<div class="col-lg-12"></div>
+						
+						<div class="col col-lg-10">
+							<div class="jukebox panel">
+
+								<div class="panel-heading">
+						    		<div id="titleName" class="panel-title"></div>
+					  			</div>
+
+								<div class="panel-body sound-body">
+					   				<div class="col-lg-12"></div>
+
 					   			<div id="soundBar">
 					   				<audio controls="controls"></audio>
 					   			</div>
+					  		
 					  		</div>
 						</div>
+					
 					</div>
+					
 					<div class="col col-lg-1"></div>
+				
 				</div>
+				
 				<div class="row">
+
 					<!--Playlist-->
 					<div class="col col-lg-1"></div>
+					
 					<div class="col col-lg-10">
 						<div class="playlist panel">
+							
 							<div class="panel-heading">
 						    	<h3 class="panel-title">Playlist</h3>
 					  		</div>
+							
 							<div class="thumbnail-row panel-body">
 					   			<div class="col-xs-6 col-md-3 col-lg-2">
-									<!-- Individual Song in Playlist -->
+					   				
 					   				<div id="trackView">
 								    	<img class="thumbnail" id="albumCover" alt="Album Art">
 								    	<div class="song" id="songName"></div>
 								    	<div class="artist" id="artistName"></div>
+								   
 								    </div>
 								</div>
 							</div>
+
 						</div>
 					</div>
+					
 					<div class="col col-lg-1"></div>
+				
 				</div>
+			
 			</div>
-			<!--Comments Container-->	
+
+			<!--Live Chat-->	
 			<div class="comment-container col col-lg-3">
 				<div class="comments panel">
 					<div class="panel-heading">
-					<!-- Trigger the modal with a button -->
+
 						<button type="button" class="modal-button pure-button pure-button-primary" data-toggle="modal" data-target="#myModal">Login</button>
 				    	<h3 class="panel-title">Live Chat</h3>
+				  	
 				  	</div>
+					
 					<div class="panel-body comments-body">
 				   		<div class="comment-placeholder">
-			   			 <!--Begin Modal and Chatbox-->
 							<div id="chatContainer">
+								
 								<div id="mainWindow"></div>
 								<div id="chatBar">
 									<form>
@@ -100,35 +127,41 @@
 										<input type="button" id="userSend" value="Send">
 									</form>
 								</div>
+							
 							</div>
-							<!-- Modal -->
+
 						  	<div class="modal fade" id="myModal" role="dialog">
 						    	<div class="modal-dialog">
-						      		<!-- Modal content-->
 						      		<div class="modal-content">
 						        		<div class="modal-header">
 						          			<button type="button" class="close" data-dismiss="modal">&times;</button>
 						        			<img class="modal-title" src="assets/images/jukebox_logo_black.png" alt="Jukebox"></img>
 						        		</div>
+							        	
 							        	<div class="modal-body">
+
 							          		<form class="form-inline">
-							          		<label for="userName">Create Username:</label>
+							          			<label for="userName">Create Username:</label>
 									        	<input type="text" id="userName" name="userName"><br>
 									        	<button type="button" class="pure-button pure-button-primary" value="Login" id="loginButton" data-dismiss="modal">Login</button>
 											</form>
+							        	
 							        	</div>
-								        </div>
-						      		</div>
-						    	</div>
-						  	</div> <!--/myModal-->
-				   		</div> <!--/comment-placeholder-->
-					</div> <!--/panel-body-->
-				</div> <!--/comments panel-->
-			</div><!--/comment-container-->
-		</div><!--/row-->
-	</div> <!--/container-fluid-->
+								    </div>
+						      	</div>
+						    </div>
+						</div> 
+				   	</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+
 	<footer>2016 Coding Bootcamp BOFE</footer>
+
 <script src="chatPrototype/chatPrototype.js"></script>
 <script src="archive/spotify.js"></script>
+
 </body>
 </html>
