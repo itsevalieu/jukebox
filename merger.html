@@ -6,12 +6,17 @@
 	
 	<title>Project 1 - Jukebox</title>
 
+
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/3.6.0/firebase.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/3.6.0/firebase.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- 	<link href="chatPrototype.css" rel="stylesheet" type="text/css"> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
 	<link rel="stylesheet" href="assets/css/merger.css">
@@ -19,6 +24,8 @@
 </head>
 
 <body>
+
+<div class="disco"></div>
 
 	<!-- Navbar -->
 	<nav class="navbar navbar-inverse">
@@ -39,7 +46,7 @@
 	</nav>
 
 	<!-- Jukebox -->
-	<div class="container-fluid">
+	<div class="container-fluid" id="aboveTheFold">
 		<div class="row">
 			<div class="col col-lg-9">
 			
@@ -105,8 +112,11 @@
 				</div>
 			
 			</div>
-
+		</div>
+	</div>
 			<!--Live Chat-->	
+	<div class="container-fluid" id="belowTheFold">
+		<div class="row">
 			<div class="comment-container col col-lg-3">
 				<div class="comments panel">
 					<div class="panel-heading">
@@ -158,7 +168,10 @@
 	</div>
 	</div>
 
+
+
 	<footer>2016 Coding Bootcamp BOFE</footer>
+
 
 <script src="chatPrototype/chatPrototype.js"></script>
 <script src="archive/spotify.js"></script>

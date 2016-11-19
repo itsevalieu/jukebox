@@ -34,7 +34,7 @@ body, html{
 }
 
 #chatBar{
-	background: #444444;
+	background: #000000;
 	clear: both;
 	display: inline-block;
 	float: left;
@@ -55,12 +55,12 @@ body, html{
 }
 
 .comments-body {
-	color: black;
+	color: #000000;
 	padding-top: 10px;
 }
 
 .comment-container{
-	background: #444444;
+	background: #000000;
 	border: 2px solid black;
 	height: 95%;
 	overflow: hidden;
@@ -73,7 +73,7 @@ body, html{
 }
 
 .comment-placeholder{
-	background: #444444;
+	background: #000000;
 	height: 95%;
 	overflow: hidden;	
 }
@@ -146,13 +146,18 @@ p, h1, h2, h3, label, footer, {
 	font-family: 'Source Sans Pro', sans-serif;
 }
 
+.panel-title, .panel-body, .panel-heading, .navbar, footer {
+	background: #000000;
+	border: #000000;;
+}
+
 .panel-title {
 	color: white;
 	padding-top: 10px;
 }
 
 .panel-body{
-	color: black;
+	color: #000000;
 	height: 100%;
 	padding: 0px;
 	width: 100%;
@@ -208,7 +213,7 @@ p, h1, h2, h3, label, footer, {
 
 #userSend{
 	border-radius: 6px;
-	color: black;
+	color: #000000;
 	float: left;
 	font-weight: bold;
 	margin-top: 10px;
@@ -219,6 +224,10 @@ p, h1, h2, h3, label, footer, {
 #voteButtons {
 	width: 10%;
 }
+
+
+/*Background*/
+
 
 
 /*Media Queries*/
@@ -254,7 +263,7 @@ p, h1, h2, h3, label, footer, {
 		width: 100%;
 	}
 	.comments-body{
-		background: #444444;
+		background: #000000;
 	}
 	/*-- Chatbox --*/
 	#mainWindow{
@@ -272,7 +281,13 @@ p, h1, h2, h3, label, footer, {
 		margin-left: 0px;
 		width: 85%;
 	}
+
+	#aboveTheFold, #belowTheFold {
+	    margin-top: 200px
+	}
+
 }
+
 @media screen and (max-width: 640px){
 	body{
 		background: green;
@@ -281,4 +296,4 @@ p, h1, h2, h3, label, footer, {
 		width: 75%;
 	}
 
-}/*iPhone size*/
+}
