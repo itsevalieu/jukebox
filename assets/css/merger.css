@@ -34,7 +34,7 @@ body, html{
 }
 
 #chatBar{
-	background: #444444;
+	background: #000000;
 	clear: both;
 	display: inline-block;
 	float: left;
@@ -55,12 +55,12 @@ body, html{
 }
 
 .comments-body {
-	color: black;
+	color: #000000;
 	padding-top: 10px;
 }
 
 .comment-container{
-	background: #444444;
+	background: #000000;
 	border: 2px solid black;
 	height: 95%;
 	overflow: hidden;
@@ -73,7 +73,7 @@ body, html{
 }
 
 .comment-placeholder{
-	background: #444444;
+	background: #000000;
 	height: 95%;
 	overflow: hidden;	
 }
@@ -146,13 +146,18 @@ p, h1, h2, h3, label, footer, {
 	font-family: 'Source Sans Pro', sans-serif;
 }
 
+.panel-title, .panel-body, .panel-heading, .navbar, footer {
+	background: #000000;
+	border: #000000;;
+}
+
 .panel-title {
 	color: white;
 	padding-top: 10px;
 }
 
 .panel-body{
-	color: black;
+	color: #000000;
 	height: 100%;
 	padding: 0px;
 	width: 100%;
@@ -203,22 +208,59 @@ p, h1, h2, h3, label, footer, {
 	margin-left: 6px;
 	margin-top: 10px;
 	padding: 5px 5px 5px 5px;
-	width: 80%;
+	width: 97%;
 }
 
 #userSend{
-	border-radius: 6px;
-	color: black;
+/*	border-radius: 6px;*/
+/*	color: #000000;*/
 	float: left;
-	font-weight: bold;
+/*	font-weight: bold;*/
 	margin-top: 10px;
 	margin-left: 10px;
-	padding: 5px 5px;
+/*	padding: 5px 5px;*/
 }
 
 #voteButtons {
 	width: 10%;
 }
+
+
+/*Background*/
+
+@import 'https://fonts.googleapis.com/css?family=Lato:300';
+
+html, body, .background
+{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: 'Lato', sans-serif;
+	background: white;
+}
+
+body
+{
+	background: linear-gradient(0deg, rgba(0, 0, 200, 0.6) , rgba(0, 0, 200, 0) );
+}
+
+.background
+{
+	background: linear-gradient(120deg, rgba(50, 150, 100, 0.6) , rgba(0, 0, 100, 0) );
+	z-index: 0
+}
+
+.bg-container
+{
+	background: linear-gradient(240deg, rgba(150, 50, 50, 0.6) , rgba(0, 0, 200, 0) );
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 0
+}
+
 
 
 /*Media Queries*/
@@ -254,7 +296,7 @@ p, h1, h2, h3, label, footer, {
 		width: 100%;
 	}
 	.comments-body{
-		background: #444444;
+		background: #000000;
 	}
 	/*-- Chatbox --*/
 	#mainWindow{
@@ -272,7 +314,47 @@ p, h1, h2, h3, label, footer, {
 		margin-left: 0px;
 		width: 85%;
 	}
+
+	#aboveTheFold, #belowTheFold {
+	    margin-top: 200px
+	}
+
+	@import 'https://fonts.googleapis.com/css?family=Lato:300';
+
+	html, body, .background
+	{
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		font-family: 'Lato', sans-serif;
+		background: white;
+	}
+
+	body
+	{
+		background: linear-gradient(0deg, rgba(0, 0, 200, 0.6) , rgba(0, 0, 200, 0) );
+	}
+
+	.background
+	{
+		background: linear-gradient(120deg, rgba(50, 150, 100, 0.6) , rgba(0, 0, 100, 0) );
+		z-index: 0
+	}
+
+	.bg-container
+	{
+		background: linear-gradient(240deg, rgba(150, 50, 50, 0.6) , rgba(0, 0, 200, 0) );
+		margin: 0;
+		padding: 0;
+		height: 100%;
+		width: 100%;
+		z-index: 0
+	}
+
+
 }
+
 @media screen and (max-width: 640px){
 	body{
 		background: green;
@@ -281,4 +363,4 @@ p, h1, h2, h3, label, footer, {
 		width: 75%;
 	}
 
-}/*iPhone size*/
+}
