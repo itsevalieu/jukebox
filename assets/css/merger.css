@@ -192,6 +192,7 @@ p, h1, h2, h3, label, footer, {
 	margin: 10px;
 	width: 100px;
 	height: 130px;
+	background-color: black;
 }
 
 .thumbnail-row{
