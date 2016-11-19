@@ -3,6 +3,7 @@
 	border: 0px;
 	margin: 10px;
 	width: 100px;
+	height: 130px;
 }
 
 .song {
@@ -14,10 +15,8 @@
 }
 
 audio {
-	padding-left: 15px;
-	margin-top: 15px;
 	float: left;
-	width: 85%;
+	width: 100%;
 }
 
 #voteButtons {
@@ -37,7 +36,9 @@ p, h1, h2, h3, label, footer, {
 	color: white;
 	padding-top: 10px;
 }
-
+.sound-body{
+	padding-top: 0px;
+}
 .comments-body {
 	color: black;
 	padding-top: 10px;

@@ -27,8 +27,8 @@
 	      	<!--Search Bar-->
 	      	<form class="pure-form" id="navbarSearchForm">
 	      			<fieldset>
-	          			<input type="text" class="searchbar" placeholder="Search">
-        				<button type="submit" class="pure-button">Submit</button>
+	          			<input id="track-input" type="text" class="searchbar" placeholder="Search">
+        				<button id="addTrack" type="submit" class="pure-button">Submit</button>
         			</fieldset>
       		</form>
 	  	</div>
@@ -47,25 +47,14 @@
 						<!--Jukebox Section-->
 						<div class="jukebox panel">
 							<div class="panel-heading">
-						    	<h3 class="panel-title">Song Name - Artist Name - Album Name</h3>
+						    	<div id="titleName" class="panel-title">
+						    	</div>
 					  		</div>
-							<div class="panel-body">
-					   			<div class="col-lg-10"></div>
+							<div class="panel-body sound-body">
+					   			<div class="col-lg-12"></div>
 					   			<div id="soundBar">
-					   				<audio controls="controls" src="https://p.scdn.co/mp3-preview/0b90429fd554bad6785faa2b8931d613db4a0ee4"></audio>
+					   				<audio controls="controls"></audio>
 					   			</div>
-					   			<div class="col-lg-2" id="voteButtons">
-					   				<div class="row" id="upVote">
-										<button type="button" class="btn btn-default btn-lg" aria-label="Thumbs Up">
-											<span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
-										</button>
-									</div>
-									<div class="row" id="downVote">
-										<button type="button" class="btn btn-default btn-lg" aria-label="Thumbs Down">
-											<span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
-										</button>
-									</div>
-								</div>
 							</div>
 						</div>
 					</div>
@@ -82,10 +71,10 @@
 							<div class="thumbnail-row panel-body">
 					   			<div class="col-xs-6 col-md-3 col-lg-2">
 									<!-- Individual Song in Playlist -->
-					   				<div>
-								    	<img class="thumbnail" id="albumCover" src="https://i.scdn.co/image/797009754c30847254b48de483f256258d90df7f" alt="Adele Placeholder">
-								    	<p class="song" id="songName">Hello</p>
-								    	<p class="artist" id="artistName">Adele</p>
+					   				<div id="trackView">
+								    	<img class="thumbnail" id="albumCover" alt="Album Art">
+								    	<div class="song" id="songName"></div>
+								    	<div class="artist" id="artistName"></div>
 								    </div>
 								</div>
 							</div>
@@ -146,5 +135,6 @@
 	</div> <!--/container-fluid-->
 	<footer>2016 Coding Bootcamp BOFE</footer>
 <script src="chatPrototype/chatPrototype.js"></script>
+<script src="archive/spotify.js"></script>
 </body>
 </html>

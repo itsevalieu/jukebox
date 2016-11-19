@@ -34,6 +34,7 @@ function queryTrack(trackEntered){
     $("#songName").empty();
     $("#artistName").empty();
     $("#trackView").empty();
+    $("#titleName").empty();
 
     // store Spotify API call which takes in a track name and limit the results to 1 
     var track = trackEntered;
@@ -67,6 +68,12 @@ function queryTrack(trackEntered){
         var artist = response.tracks.items[0].artists[0].name;
         var trackArtist = $("<h3>").text("Artist: " + artist);
         $("#artistName").append(trackArtist);
+
+        // parse artist and song title from object to display on header
+        var title = response.tracks.items[0].name;
+        var artist = response.tracks.items[0].artists[0].name;
+        var trackTitle = $("<p>").text(title + "  -  " + artist);
+        $("#titleName").append(trackTitle);
 
         // parse audio from object into an iframe
         var playTrack = $("<iframe>");
