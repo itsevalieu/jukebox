@@ -12,7 +12,6 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/3.6.0/firebase.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<!-- 	<link href="chatPrototype.css" rel="stylesheet" type="text/css"> -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -24,9 +23,8 @@
 </head>
 
 <body>
-
-<div class="disco"></div>
-
+<div class="background">
+<div class="bg-container">
 	<!-- Navbar -->
 	<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
@@ -44,6 +42,7 @@
 		  	
 		</div>
 	</nav>
+
 
 	<!-- Jukebox -->
 	<div class="container-fluid" id="aboveTheFold">
@@ -134,7 +133,7 @@
 								<div id="chatBar">
 									<form>
 										<input type="text" id="userChatInput">
-										<input type="button" id="userSend" value="Send">
+										<button type="button" class="pure-button pure-button-primary" id="userSend" value="Send">Send</button>
 									</form>
 								</div>
 							
@@ -172,6 +171,8 @@
 
 	<footer>2016 Coding Bootcamp BOFE</footer>
 
+</div>
+</div>
 
 <script src="chatPrototype/chatPrototype.js"></script>
 <script src="archive/spotify.js"></script>

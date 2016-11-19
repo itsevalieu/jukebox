@@ -208,17 +208,17 @@ p, h1, h2, h3, label, footer, {
 	margin-left: 6px;
 	margin-top: 10px;
 	padding: 5px 5px 5px 5px;
-	width: 80%;
+	width: 97%;
 }
 
 #userSend{
-	border-radius: 6px;
-	color: #000000;
+/*	border-radius: 6px;*/
+/*	color: #000000;*/
 	float: left;
-	font-weight: bold;
+/*	font-weight: bold;*/
 	margin-top: 10px;
 	margin-left: 10px;
-	padding: 5px 5px;
+/*	padding: 5px 5px;*/
 }
 
 #voteButtons {
@@ -227,6 +227,39 @@ p, h1, h2, h3, label, footer, {
 
 
 /*Background*/
+
+@import 'https://fonts.googleapis.com/css?family=Lato:300';
+
+html, body, .background
+{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: 'Lato', sans-serif;
+	background: white;
+}
+
+body
+{
+	background: linear-gradient(0deg, rgba(0, 0, 200, 0.6) , rgba(0, 0, 200, 0) );
+}
+
+.background
+{
+	background: linear-gradient(120deg, rgba(50, 150, 100, 0.6) , rgba(0, 0, 100, 0) );
+	z-index: 0
+}
+
+.bg-container
+{
+	background: linear-gradient(240deg, rgba(150, 50, 50, 0.6) , rgba(0, 0, 200, 0) );
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 0
+}
 
 
 
@@ -285,6 +318,40 @@ p, h1, h2, h3, label, footer, {
 	#aboveTheFold, #belowTheFold {
 	    margin-top: 200px
 	}
+
+	@import 'https://fonts.googleapis.com/css?family=Lato:300';
+
+	html, body, .background
+	{
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		font-family: 'Lato', sans-serif;
+		background: white;
+	}
+
+	body
+	{
+		background: linear-gradient(0deg, rgba(0, 0, 200, 0.6) , rgba(0, 0, 200, 0) );
+	}
+
+	.background
+	{
+		background: linear-gradient(120deg, rgba(50, 150, 100, 0.6) , rgba(0, 0, 100, 0) );
+		z-index: 0
+	}
+
+	.bg-container
+	{
+		background: linear-gradient(240deg, rgba(150, 50, 50, 0.6) , rgba(0, 0, 200, 0) );
+		margin: 0;
+		padding: 0;
+		height: 100%;
+		width: 100%;
+		z-index: 0
+	}
+
 
 }
 
