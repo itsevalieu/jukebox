@@ -1,0 +1,29 @@
+nav {
+	background: #000000;
+	height: 50px;
+	display: flex;
+	flex-flow: row;
+	justify-content: center;
+	align-items: center;
+	z-index: 6;
+}
+#brand {
+	height: 35px;
+}
+
+/*Searchbar*/
+form {
+	border: 1px solid purple;
+	display: flex;
+}
+.searchbar {
+	border: 1px solid grey;
+	flex: 1;
+	height: 25px;
+	width: 100%;
+	text-align: center;
+	z-index: 6;
+}
+#addTrack {
+	z-index: 6;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>JUKEBOX</title>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<!-- CSS -->
+	<link rel="stylesheet" href="./assets/css/reset.css">
+	<link rel="stylesheet" href="./assets/css/index.css">
+	<link rel="stylesheet" href="./assets/css/navbar.css">
+	<link rel="stylesheet" href="./assets/css/footer.css">
+	<link rel="stylesheet" href="./assets/css/chatbox.css">
+	<link rel="stylesheet" href="./assets/css/playlist.css">
+	<link rel="stylesheet" href="./assets/css/radio.css">
+	<link rel="stylesheet" href="./assets/css/equalizer-gif.css">
+</head>
+<body>
+	<!-- Navbar -->
+	<nav>
+		<div><img src="./assets/images/jukebox_logo_white.png" alt="JUKEBOX"/ id="brand"></div>
+	</nav>
+	<!-- Searchbar -->
+	<div>
+		<form>
+			<input id="track-input" type="text" class="searchbar" placeholder="Search Music"/>
+			<button id="addTrack" type="submit">Submit</button>	
+		</form>
+	</div>
+	<!-- Main -->
+	<main>
+		<section class="focus">
+			<div id="radio">
+				<div class="radio-header">RADIO</div>
+				<div class="radio-body">PLAYER</div>
+			</div>
+			<div id="playlist">
+				<div class="playlist-header">PLAYLIST</div>
+				<div class="playlist-body">TRACKS</div>
+				
+			</div>
+		</section>
+		<div class="sidebar">
+			<section class="hidden">
+				<div id="chatbox">
+					<div class="chatbox-header">
+						<h3>LIVE CHAT</h3>
+						<button>Login</button>
+					</div>
+					<div class="chatbox-window">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas amet facilis odio magni odit sapiente iure, ratione blanditiis mollitia, at, officiis voluptatum quam aut cumque provident! Aut reprehenderit quis autem.
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas amet facilis odio magni odit sapiente iure, ratione blanditiis mollitia, at, officiis voluptatum quam aut cumque provident! Aut reprehenderit quis autem.
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet fugit autem nisi sunt perferendis molestiae? Veniam, sunt quam quia quos ex dolorum. Earum nostrum repellendus sed exercitationem fugiat id voluptatum.
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet fugit autem nisi sunt perferendis molestiae? Veniam, sunt quam quia quos ex dolorum. Earum nostrum repellendus sed exercitationem fugiat id voluptatum.
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet fugit autem nisi sunt perferendis molestiae? Veniam, sunt quam quia quos ex dolorum. Earum nostrum repellendus sed exercitationem fugiat id voluptatum.
+					</div>
+					<div class="chatbox-input">
+						<form>
+							<textarea rows="5" id="#" type="text" name="message" class="chatbar" placeholder="Enter Message"></textarea>
+							<button id="addMessage" type="submit">Send</button>	
+						</form>
+					</div>
+				</div>
+			</section>
+			<section>
+				<button id="open-chatbox">Open Live Chat</button>
+				<button id="close-chatbox">Hide Live Chat</button>
+			</section>
+		</div>
+	</main>
+	<!-- Footer -->
+	<footer>© 2016 FOBE</footer>
+
+	<script type="text/javascript" src="./assets/js/chatbox.js"></script>
+	<script type="text/javascript" src="./assets/js/equalizer-gif.js"></script>
+	
+</body>
+</html>

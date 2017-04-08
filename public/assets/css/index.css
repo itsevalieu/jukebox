@@ -1,0 +1,62 @@
+html {
+	height: 100%;
+}
+body {
+	background: linear-gradient(120deg, rgba(50, 150, 100, 0.6) , rgba(0, 0, 100, 0) );
+	background-repeat: none;
+	min-height: 100%;
+	display: flex;
+	flex-flow: column;
+}
+main {
+	flex: 1;
+	background: linear-gradient(0deg, rgba(0, 0, 200, 0.6) , rgba(0, 0, 200, 0) );
+	background-repeat: none;
+}
+.focus {
+	display: flex;
+	flex: 1;
+	flex-flow: column;
+	background: linear-gradient(240deg, rgba(150, 50, 50, 0.6) , rgba(0, 0, 200, 0) );
+	background-repeat: none;
+}
+/*Laptops/Desktop*/
+@media screen and (min-width: 1240px){
+	main {
+		display: flex;
+		flex-flow: row;
+	}
+	.focus {
+		width: 100%;
+	}	
+}
+/*iPads*/
+@media screen and (min-width: 945px) and (max-width: 1240px){
+	main {
+		display: flex;
+		flex-flow: row;
+	}
+	.focus {
+		width: 100%;
+	}
+}
+/*Filler*/
+@media screen and (min-width: 760px) and (max-width: 945px){
+	main {
+		display: flex;
+		flex-flow: column;
+	}
+	.focus {
+		width: 100%;
+	}
+}
+/*Smart Phones*/
+@media only screen and (max-width: 760px) {
+	main {
+		display: flex;
+		flex-flow: column;
+	}
+	.focus {
+		width: 100%;
+	}	
+}
