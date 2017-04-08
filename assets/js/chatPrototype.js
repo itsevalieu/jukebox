@@ -81,7 +81,7 @@
  	userName = $("#userName").val().trim();
  	writeUserData(userName);
  	$("#userName").val("");
- 	$("#myModal").modal("hide");
+ 	$("#myModal").hide();
  	console.log("User name has been set to " + userName);
  	localStorage.userName = userName;
  	return userName;
