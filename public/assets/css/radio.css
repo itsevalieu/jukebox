@@ -1,8 +1,9 @@
 #radio{
-	border: 1px solid #000;
+	border: 1px solid #556;
 	margin: 2em 2em;
 	background: #ccc;
 	border-radius: 4px;
+	box-shadow: 1px 1px 1px #555;
 }
 .radio-header {
 	height: 25px;
@@ -11,5 +12,4 @@
 .radio-body {
 	height: 75px;
 	margin: 10px 10px;
-
 }

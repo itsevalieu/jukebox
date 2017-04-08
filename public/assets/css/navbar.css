@@ -8,12 +8,12 @@ nav {
 	z-index: 6;
 }
 #brand {
-	height: 35px;
+	height: 40px;
 }
 
 /*Searchbar*/
 form {
-	border: 1px solid purple;
+	/*border: 1px solid purple;*/
 	display: flex;
 }
 .searchbar {

@@ -1,0 +1,57 @@
+.modal-overlay {
+	background: rgba(0,0,0,.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 10;
+}
+.modal {
+	border: 1px solid grey;
+	border-radius: 6px;
+	margin: 10% 20%;
+	background: #fff;
+	display: flex;
+	flex-flow: column;
+	align-content: space-around;
+	justify-content: space-around;
+}
+.modal-header {
+	border-bottom: 1px solid grey;
+	display: flex;
+	flex-flow: row;
+	justify-content: space-between;
+	padding: 10px 10px;
+	align-items: center;
+}
+.modal-body {
+	height: 250px;
+}
+.modal-bottom {
+	border-top: 1px solid grey;
+	padding: 10px 10px;
+}
+.modal-form {
+	display: flex;
+	flex-flow: row;
+	margin: 5% 10%;
+	justify-content: space-around;
+}
+#userName {
+	flex: 1;
+	margin: 0 10px;
+	width: 100%;
+}
+#loginButton {
+	flex: 1;
+	float: right;
+	height: 25px;
+	width: 50px;
+}
+.close {
+	background: none;
+	border: none;
+	color: black;
+	font-size: 20px;
+}

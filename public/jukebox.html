@@ -4,6 +4,8 @@
 	<meta charset="utf-8">
 	<title>JUKEBOX</title>
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/3.6.0/firebase.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<!-- CSS -->
 	<link rel="stylesheet" href="./assets/css/reset.css">
 	<link rel="stylesheet" href="./assets/css/index.css">
@@ -12,7 +14,7 @@
 	<link rel="stylesheet" href="./assets/css/chatbox.css">
 	<link rel="stylesheet" href="./assets/css/playlist.css">
 	<link rel="stylesheet" href="./assets/css/radio.css">
-	<link rel="stylesheet" href="./assets/css/equalizer-gif.css">
+	<link rel="stylesheet" href="./assets/css/modal.css">
 </head>
 <body>
 	<!-- Navbar -->
@@ -30,13 +32,22 @@
 	<main>
 		<section class="focus">
 			<div id="radio">
-				<div class="radio-header">RADIO</div>
-				<div class="radio-body">PLAYER</div>
+				<div class="radio-header">
+					<div id="titleName"></div>
+				</div>
+				<div class="radio-body">
+					<div id="soundBar">
+                    	<audio controls></audio>
+                	</div>
+				</div>
 			</div>
 			<div id="playlist">
 				<div class="playlist-header">PLAYLIST</div>
-				<div class="playlist-body">TRACKS</div>
-				
+				<div class="playlist-body">
+					<div id="trackView"> <img class="thumbnail" id="albumCover">
+					<div class="song" id="songName"></div>
+					<div class="artist" id="artistName"></div>
+				</div>
 			</div>
 		</section>
 		<div class="sidebar">
@@ -44,19 +55,14 @@
 				<div id="chatbox">
 					<div class="chatbox-header">
 						<h3>LIVE CHAT</h3>
-						<button>Login</button>
+						<button type="button" class="modal-button" data-target="#myModal" data-toggle="modal">Login</button>
 					</div>
-					<div class="chatbox-window">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas amet facilis odio magni odit sapiente iure, ratione blanditiis mollitia, at, officiis voluptatum quam aut cumque provident! Aut reprehenderit quis autem.
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas amet facilis odio magni odit sapiente iure, ratione blanditiis mollitia, at, officiis voluptatum quam aut cumque provident! Aut reprehenderit quis autem.
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet fugit autem nisi sunt perferendis molestiae? Veniam, sunt quam quia quos ex dolorum. Earum nostrum repellendus sed exercitationem fugiat id voluptatum.
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet fugit autem nisi sunt perferendis molestiae? Veniam, sunt quam quia quos ex dolorum. Earum nostrum repellendus sed exercitationem fugiat id voluptatum.
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet fugit autem nisi sunt perferendis molestiae? Veniam, sunt quam quia quos ex dolorum. Earum nostrum repellendus sed exercitationem fugiat id voluptatum.
+					<div class="chatbox-window" id="mainWindow">
 					</div>
 					<div class="chatbox-input">
 						<form>
-							<textarea rows="5" id="#" type="text" name="message" class="chatbar" placeholder="Enter Message"></textarea>
-							<button id="addMessage" type="submit">Send</button>	
+							<textarea rows="5" id="userChatInput" type="text" name="message" class="chatbar" placeholder="Enter Message"></textarea>
+							<button id="userSend addMessage" value="Send" type="submit">Send</button>	
 						</form>
 					</div>
 				</div>
@@ -67,11 +73,30 @@
 			</section>
 		</div>
 	</main>
+	<!-- Modal -->
+	<div class="modal-overlay" id="myModal" role="dialog">
+		<div class="modal">
+			<div class="modal-header">
+				<h3>Login</h3>
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+			<div class="modal-body">
+				<form class="modal-form">
+					<label for="userName">Create Username:</label>
+					<input type="text" id="userName" name="userName">
+			</div>
+			<div class="modal-bottom">
+				<button type="button" value="Login" id="loginButton" data-dismiss="modal">Login</button>
+				</form>
+			</div>
+		</div>
+	</div>
 	<!-- Footer -->
 	<footer>© 2016 FOBE</footer>
-
+	<script type="text/javascript" src="./assets/js/modal.js"></script>
 	<script type="text/javascript" src="./assets/js/chatbox.js"></script>
-	<script type="text/javascript" src="./assets/js/equalizer-gif.js"></script>
+	<script type="text/javascript" src="./assets/js/chatPrototype.js"></script>
+	<script type="text/javascript" src="../archive/spotify.js"></script>
 	
 </body>
 </html>

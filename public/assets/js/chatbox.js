@@ -19,8 +19,10 @@ $("#addTrack").click(function() {
 
 	console.log("add track");
 });
-$("#addMessage").click(function() {
-	event.preventDefault();
+// $("#addMessage").click(function() {
+// 	event.preventDefault();
 
-	console.log("add message");
-});
+// 	console.log("add message");
+// });
+
+// Modal
