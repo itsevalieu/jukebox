@@ -1,16 +1,19 @@
 #playlist {
-	border: 1px solid #000;
+	border: 1px solid #aaa;
 	margin: 2em 2em;
 	background: #ccc;
 	border-radius: 4px;
+	box-shadow: 1px 1px 1px #555;
 }
 .playlist-header {
 	height: 25px;
 	margin: 10px 10px;
+	border-bottom: 1px solid grey;
 
 }
 .playlist-body {
 	height: 75px;
 	margin: 10px 10px;
+	overflow-x: scroll;
 
 }

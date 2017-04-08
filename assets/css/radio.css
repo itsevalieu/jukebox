@@ -1,5 +1,5 @@
 #radio{
-	border: 1px solid #556;
+	border: 1px solid #aaa;
 	margin: 2em 2em;
 	background: #ccc;
 	border-radius: 4px;
@@ -8,8 +8,61 @@
 .radio-header {
 	height: 25px;
 	margin: 10px 10px;
+	border-bottom: 1px solid grey;
+
 }
 .radio-body {
-	height: 75px;
-	margin: 10px 10px;
+/*	border: 1px solid red;
+*/	height: 125px;
+	margin: 0px 10px;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: flex-end;
+}
+#soundBar {
+	width: 100%;
+}
+audio {
+	width: 100%;
+}
+#music-bars span {
+	background: linear-gradient(120deg, rgba(50, 150, 100, 0.6) , rgba(0, 0, 100, 0) );
+	display: block;
+	float: left;
+	margin-right: 2px;
+}
+.equalizer {
+/*	border: 1px solid red;
+*/	height: 75px;
+	width: 100%;
+	margin-bottom: 10px;
+	display: flex;
+	justify-content: center;
+
+}
+/*Laptops/Desktop*/
+@media screen and (min-width: 1240px){
+	#music-bars span {
+		width: 11px;
+	}
+}
+/*iPads*/
+@media screen and (min-width: 945px) and (max-width: 1240px){
+	#music-bars span {
+		width: 7.5px;
+	}
+}
+/*Filler*/
+@media screen and (min-width: 760px) and (max-width: 945px){
+	#music-bars span {
+		width: 5.5px;
+	}
+}
+/*Smart Phones*/
+@media only screen and (max-width: 760px) {	
+	#music-bars span {
+		width: 1.5px;
+		overflow-x: hidden;
+	}
 }

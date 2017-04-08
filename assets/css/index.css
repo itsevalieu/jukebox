@@ -20,6 +20,9 @@ main {
 	background: linear-gradient(240deg, rgba(150, 50, 50, 0.6) , rgba(0, 0, 200, 0) );
 	background-repeat: none;
 }
+p, h3 {
+	font-family: sans-serif;
+}
 /*Laptops/Desktop*/
 @media screen and (min-width: 1240px){
 	main {

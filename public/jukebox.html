@@ -6,6 +6,8 @@
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/3.6.0/firebase.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<script type="text/javascript" src="../assets/js/chatbox.js"></script>
 	<!-- CSS -->
 	<link rel="stylesheet" href="../assets/css/reset.css">
 	<link rel="stylesheet" href="../assets/css/index.css">
@@ -23,9 +25,9 @@
 	</nav>
 	<!-- Searchbar -->
 	<div>
-		<form>
+		<form class="searchbar-form">
 			<input id="track-input" type="text" class="searchbar" placeholder="Search Music"/>
-			<button id="addTrack" type="submit">Submit</button>	
+			<button id="addTrack" type="submit">Search</button>	
 		</form>
 	</div>
 	<!-- Main -->
@@ -33,16 +35,21 @@
 		<section class="focus">
 			<div id="radio">
 				<div class="radio-header">
-					<div id="titleName"></div>
+					<div id="titleName">Song</div>
 				</div>
 				<div class="radio-body">
+					<div class="equalizer">
+						<div id='music-bars'>
+							<span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+						</div>
+					</div>
 					<div id="soundBar">
                     	<audio controls></audio>
                 	</div>
 				</div>
 			</div>
 			<div id="playlist">
-				<div class="playlist-header">PLAYLIST</div>
+				<div class="playlist-header">Playlist</div>
 				<div class="playlist-body">
 					<div id="trackView"> <img class="thumbnail" id="albumCover">
 					<div class="song" id="songName"></div>
@@ -54,7 +61,7 @@
 			<section class="hidden">
 				<div id="chatbox">
 					<div class="chatbox-header">
-						<h3>LIVE CHAT</h3>
+						<h3>Live Chatroom</h3>
 						<button type="button" class="modal-button" data-target="#myModal" data-toggle="modal">Login</button>
 					</div>
 					<div class="chatbox-window" id="mainWindow">
@@ -94,7 +101,6 @@
 	<!-- Footer -->
 	<footer>© 2016 FOBE</footer>
 	<script type="text/javascript" src="../assets/js/modal.js"></script>
-	<script type="text/javascript" src="../assets/js/chatbox.js"></script>
 	<script type="text/javascript" src="../assets/js/chatPrototype.js"></script>
 	<script type="text/javascript" src="../archive/spotify.js"></script>
 	

@@ -23,17 +23,19 @@
 	flex-flow: row;
 	justify-content: space-between;
 	align-items: center;
-	margin: 5px 5px;
+	margin: 0 5px;
 	order: 1;
+	height: 25px;
 }
 .chatbox-window {
 	background: white;
 	padding: 5px 5px;
-	margin: 5px 5px;
+	margin: 3px 5px;
 	color: #000;
 	height: 300px;
 	overflow: scroll;
 	order: 2;
+	font-size: 14px;
 }
 .chatbox-input {
 	background: white;
@@ -50,6 +52,10 @@
 #open-chatbox, #close-chatbox {
 	height: 25px;
 	width: 100%;
+	border-radius: 1px;
+	background: #2364AA;
+	border: 1px solid #2364AA;
+	color: white;
 }
 
 /*Laptops/Desktop*/
