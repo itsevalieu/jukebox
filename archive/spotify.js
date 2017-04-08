@@ -1,13 +1,7 @@
 $(document).ready(function(){
     // stores the list of keys, tracks, up votes, and down votes for each track that is copied from the database
     var trackList = [];
-    var trackKeyList = [];
-    var thumbsUpList = [];
-    var thumbsDownList = [];
-    var thumbsUpCount = 0;
-    var thumbsDownCount = 0;
-    var thiscount = 0;
-    
+
     function queryTrack(trackEntered){
         // clear HTML section for these IDs to make room for displaying new track info
         $("#albumCover").empty();
