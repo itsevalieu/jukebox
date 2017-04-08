@@ -25,6 +25,8 @@
 
  	//Chat Send Button Functionality
  	$("#userSend").on("click", function () {
+ 		 event.preventDefault();
+
  		console.log("You clicked the Send Button.");
  		//this functionality is repeated below - break it into a function
  		input = $("#userChatInput").val().trim();
