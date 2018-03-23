@@ -1,5 +1,5 @@
-# Project 1: Jukebox
+# Jukebox
 A music playlist application promoting community via chat, likes, and shares.
 
-Technologies:
+Tech Stack:
 * HTML, CSS, Bootstrap, JS, jQuery, Firebase, iTunes API
